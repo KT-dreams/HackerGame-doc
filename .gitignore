@@ -1,5 +1,6 @@
-_build/doctrees
-_build/html/venv
-_build/html/_sources
+_build
+docs/doctrees
+docs/html/venv
+docs/html/_sources
 venv
 .swp
