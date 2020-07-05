@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
-  <title>How to &mdash; Hacker-doc  documentation</title>
+  <title>How to develop documentation &mdash; Hacker-doc  documentation</title>
   
 
   
@@ -29,8 +29,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Hacker-doc  documentation" href="../index.html"/>
-        <link rel="next" title="IaC" href="iac/index.html"/>
-        <link rel="prev" title="Research" href="../research/index.html"/>
+        <link rel="up" title="How to" href="index.html"/>
+        <link rel="next" title="Team" href="../team/index.html"/>
+        <link rel="prev" title="Backend" href="backend/index.html"/>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="cache-control" content="public" />
@@ -73,11 +74,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">How to</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How to</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="iac/index.html">IaC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="frontend/index.html">Frontend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="backend/index.html">Backend</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop-documentation.html">How to develop documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to develop documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../team/index.html">Team</a><ul class="simple">
@@ -130,28 +131,63 @@
           <div role="main" class="">
 
 	    <div id="content" class="hfeed entry-container hentry">
-  <div class="section" id="how-to">
-<h1>How to<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="iac/index.html">IaC</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="frontend/index.html">Frontend</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="backend/index.html">Backend</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="develop-documentation.html">How to develop documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="develop-documentation.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop-documentation.html#preparing-environment">Preparing environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop-documentation.html#building-documentation">Building documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop-documentation.html#exiting-virtual-environment">Exiting virtual environment</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="how-to-develop-documentation">
+<h1>How to develop documentation<a class="headerlink" href="#how-to-develop-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows how to setup and develop documentation.</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to do this first time only.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Install <em>python3.7</em> and <em>venv</em></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span>
+<span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">deadsnakes</span><span class="o">/</span><span class="n">ppa</span>
+<span class="n">apt</span> <span class="n">update</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="o">.</span><span class="mi">7</span> <span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">venv</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Setup virtual environment:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="o">.</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="preparing-environment">
+<h2>Preparing environment<a class="headerlink" href="#preparing-environment" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to do it always when you start new terminal session.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you just made <em>Setup</em>, your environment is prepared and you can skip this step.</p>
+</div>
+<p>Activate virtual environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-documentation">
+<h2>Building documentation<a class="headerlink" href="#building-documentation" title="Permalink to this headline">¶</a></h2>
+<p>To build documentation execute following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>This command produce HTML output and copy it to <em>./docs</em> directory.</p>
+</div>
+<div class="section" id="exiting-virtual-environment">
+<h2>Exiting virtual environment<a class="headerlink" href="#exiting-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<p>When you will finish developing you should deactivate virtual environment.</p>
+<p>Run command below or close terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -161,10 +197,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="iac/index.html" class="btn btn-neutral float-right" title="IaC">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../team/index.html" class="btn btn-neutral float-right" title="Team">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../research/index.html" class="btn btn-neutral" title="Research"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="backend/index.html" class="btn btn-neutral" title="Backend"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

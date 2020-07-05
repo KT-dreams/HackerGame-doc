@@ -1,5 +1,5 @@
 IaC
-======
+===
 
 .. toctree::
    :maxdepth: 2
