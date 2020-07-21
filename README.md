@@ -1,3 +1,3 @@
-# https://kt-dreams.github.io/hacker-doc/
+[Documentation site](https://kt-dreams.github.io/hacker-doc/)
 
-[How to develop documentation](how-to/develop_documentation.rst)
+[How to develop documentation](https://kt-dreams.github.io/hacker-doc/how-to/develop-documentation.html)
