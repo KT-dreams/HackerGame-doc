@@ -8,4 +8,4 @@ Topics
    iac/index
    frontend/index
    backend/index
-   login_flow_chart
+   login_sequence_diagram
